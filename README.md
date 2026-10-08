@@ -1,26 +1,18 @@
-# Katelynn Noah — Portfolio
+# Katelynn Noah — Editorial Edition 03
 
-A static, single-page portfolio built for GitHub Pages. No dependencies, installation, or build step is needed. All content remains readable with JavaScript disabled.
+A complete, static portfolio website. Open `index.html` directly or publish the files at the root of the existing GitHub Pages repository.
 
-## Publish
+## Contents
 
-1. Create a new GitHub repository named `katelynn-noah-portfolio`.
-2. Upload `index.html` and the `assets` folder to the root of its default branch.
-3. In repository Settings → Pages, choose deployment from a branch, select the default branch and `/ (root)`, and save.
-4. Use the published address GitHub supplies after deployment completes.
+- `index.html`: Complete portfolio content and semantic page structure.
+- `styles.css`: Black-and-white editorial theme, responsive layout, and reduced-motion and print support.
+- `script.js`: Optional keyboard-accessible image enlargement using a native dialog.
+- `assets/`: Original project images and the portfolio favicon.
+- `.nojekyll`: Static GitHub Pages marker.
+- `START-HERE.txt`: Opening, uploading, and editing instructions.
 
-## Edit
+No package manager, network fonts, build process, login, or external image hosting is needed. Project and contact links are the only external destinations.
 
-Content and responsive styles are in `index.html`. Images are in `assets/`. All navigation is in-page except explicitly labeled project, social, image, and email links.
+The original violet web preview comes from the owner's Hope-Portfolio-2 repository. The Matuska reference is labeled as a design study. The Snyder frame comes from a supplied editing screenshot; CSS crops its surrounding editing interface while the original file remains intact. These remain provisional work selections pending the owner's preferred assets.
 
-## Asset notes
-
-- Hope Pixel: existing screenshot from the owner's Hope-Portfolio-2 repository.
-- Matuska: existing product-guide design study; presented as a study, not a published technical reference or claim of independent authorship.
-- Snyder: supplied editing screenshot, intentionally labeled as an in-progress behind-the-edit view. Replace with a finished reel or clean still when available.
-
-## Review notes
-
-The experience timeline follows the owner's correction: Matuska in-office 2019–2024, remote afterward. Contact links come from the existing portfolio/profile. No invented performance metrics, testimonials, or client results are included.
-
-Checked: image files exist, images have alt text, internal anchors resolve, and IDs are unique. Desktop/mobile CSS and reduced-motion support are included. Browser visual QA and GitHub Pages deployment have not yet been completed.
+Matuska experience follows the owner's corrected timeline: in-office 2019–2024 and remote afterward. No invented client results, testimonials, or performance metrics are included.

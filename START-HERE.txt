@@ -1,0 +1,29 @@
+KATELYNN NOAH — COMPLETE EDITORIAL WEBSITE
+
+This is the complete replacement website, Editorial Edition 03.
+Its opening screen is BLACK, with KATELYNN in large white letters and Noah. in italic type.
+
+OPEN IT
+Extract the ZIP first, then double-click index.html.
+Keep styles.css, script.js, and the assets folder beside index.html.
+No installation or build is required. The site works offline.
+
+UPLOAD TO YOUR EXISTING GITHUB PORTFOLIO
+Upload these files to the ROOT of katelynn-noah-portfolio:
+  index.html
+  styles.css
+  script.js
+  assets/ (all four files)
+  .nojekyll
+
+Replace the previous index.html. Keep your current GitHub Pages settings.
+When the Pages deployment finishes, refresh the site with Ctrl+Shift+R.
+
+EDIT CONTENT
+Text, project descriptions, and links: index.html
+Layout, typography, responsive styles: styles.css
+Optional image enlargement: script.js
+Project images: assets/
+
+The current work samples remain selections from earlier shared work.
+Replace them with your preferred finished projects when you have chosen those assets.
