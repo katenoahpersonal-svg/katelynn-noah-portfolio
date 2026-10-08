@@ -6,7 +6,7 @@ Complete static portfolio for GitHub Pages: an ivory and burgundy gallery theme,
 
 - Hope Records: real live-site screenshot and website link.
 - Discount Fireworks Outlet: real live-site screenshot and website link.
-- Matuska Taxidermy Supply: supplied brand artwork, ecommerce feature, and storefront link.
+- Matuska Taxidermy Supply: actual storefront preview and the correct shop.matuskataxidermy.com link. The brand logo remains in the logo collection.
 - 2024 and 2022 Matuska catalogs: live Issuu readers with direct publication links.
 - Complete Black Friday 2024 catalog: large live Issuu reader with a direct link.
 - Ten supplied logo designs, four promotional/social graphics, both Hope in Print business card sides, an A & E Outdoor Services brochure, T & M Safety Systems ads and a review graphic.
@@ -19,7 +19,7 @@ The page shows every artwork without opening individual project pages. Optional 
 
 Extract the ZIP and open `index.html`. Keep `styles.css`, `script.js`, and `assets/` in the same folder. For GitHub Pages, publish these files at the repository root and replace the existing `index.html`. `.nojekyll` is included.
 
-All artwork, videos, brand-board PDFs, and website screenshots are local files. Videos are encoded at 720 pixels wide in compatible H.264 MP4 for web playback, with the final reel’s audio retained. The Issuu catalog readers require internet and depend on the publisher's embedding settings. The original PDF files and standalone catalog cover images were not available to download during this update; direct Issuu links remain visible below each reader. The Matuska storefront returned a certificate error during capture, so its feature uses supplied brand artwork, not a fabricated website screenshot.
+All artwork, videos, brand-board PDFs, and website screenshots are local files. Videos are encoded at 720 pixels wide in compatible H.264 MP4 for web playback, with the final reel’s audio retained. The Issuu catalog readers require internet and depend on the publisher's embedding settings. The original PDF files and standalone catalog cover images were not available to download during this update; direct Issuu links remain visible below each reader. The Matuska feature uses a real screenshot of https://shop.matuskataxidermy.com/ and links to that storefront.
 
 ## Edit
 
@@ -29,3 +29,4 @@ Image enlargement and section menu: `script.js`.
 Project assets: `assets/` (safe filenames; supplied artwork encoded as high-quality WebP at its original dimensions).
 
 Matuska experience retains the owner's timeline: in-office 2019–2024, remote afterward. No invented results or metrics.
+
