@@ -28,7 +28,7 @@
   color-scheme: light;
 }
 * { box-sizing: border-box; }
-html { scroll-padding-top: 24px; }
+html { scroll-padding-top: 24px; scrollbar-gutter: stable; }
 body { margin: 0; line-height: 1.65; }
 body.dialog-open { overflow: hidden; }
 h1,h2,h3,h4,p,figure { margin: 0; }
@@ -157,14 +157,23 @@ h2 { font: 400 1.95rem/1.2 var(--serif); letter-spacing: -.025em; }
 .skill h3 { font: 500 .9375rem/1.4 var(--sans); }
 .skill > p { color: var(--muted); font-size: .875rem; padding-top: 10px; }
 .skill .tools { color: var(--ink); font-size: .8125rem; line-height: 1.8; padding-top: 13px; }
-.contact-section { border-top: 1px solid var(--line); padding-block: 39px 24px; }
-.contact-main { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; align-items: center; }
-.contact-main .eyebrow { margin-bottom: 12px; }
-.contact-main h2 { font-size: 2.3rem; }
-.contact-details { justify-self: end; }
+.contact-trigger { border: 0; padding: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; cursor: pointer; }
+.contact-trigger:hover { text-decoration-thickness: 2px; }
+.contact-card { position: fixed; inset: 0; margin: auto; width: min(520px,calc(100% - 40px)); height: fit-content; max-height: calc(100dvh - 40px); overflow: auto; padding: 38px; border: 1px solid var(--line); background: var(--cream); color: var(--ink); box-shadow: 0 16px 60px rgb(47 51 48 / .12); }
+.contact-card::backdrop { background: rgb(47 51 48 / .25); backdrop-filter: blur(3px); }
+.contact-card-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.contact-close { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--line); color: var(--ink); background: var(--sage); cursor: pointer; }
+.contact-card h2 { font-size: 2.65rem; line-height: 1.15; }
+#contact-description { margin-top: 10px; font-size: .875rem; color: var(--muted); }
+.contact-email { margin-top: 29px; padding: 20px; background: var(--sage); }
+.contact-email .eyebrow { margin-bottom: 8px; }
+.contact-profiles { display: flex; gap: 32px; border-bottom: 1px solid var(--line); margin-top: 26px; padding-bottom: 26px; font-size: .875rem; }
+.contact-profiles a { display: inline-flex; align-items: center; gap: 9px; }
+.contact-card-note { padding-top: 20px; font-size: .75rem; color: var(--muted); }
+.contact-fallback { padding-block: 20px; }
 .email-link { font-size: 1.0625rem; overflow-wrap: anywhere; }
 .social-links { display: flex; gap: 24px; margin-top: 18px; font-size: .8125rem; }
-footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1px solid var(--line); margin-top: 39px; padding-top: 18px; color: var(--muted); font-size: .75rem; }
+footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1px solid var(--line); margin-top: 0; padding-block: 18px 24px; color: var(--muted); font-size: .75rem; }
 .image-dialog { position: fixed; width: min(1150px,calc(100% - 40px)); max-height: calc(100dvh - 40px); padding: 0; border: 1px solid var(--line); background: var(--cream); color: var(--ink); }
 .image-dialog::backdrop { background: rgb(47 51 48 / .74); }
 .dialog-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 15px 20px; border-bottom: 1px solid var(--line); background: var(--cream); position: sticky; top: 0; z-index: 1; }
@@ -218,8 +227,6 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
   .video-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .video-card { padding-bottom: 28px; }
   .about-grid { grid-template-columns: 1fr; gap: 22px; }
-  .contact-main { grid-template-columns: 1fr; gap: 22px; }
-  .contact-details { justify-self: start; }
 }
 @media (max-width: 520px) {
   .portfolio-rail { display: block; padding: 23px 20px; }
@@ -262,14 +269,18 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
   .skill { padding: 20px; }
   .skills-grid { row-gap: 0; }
   .skill + .skill { margin-top: 20px; }
-  .about-grid h2,.contact-main h2 { font-size: 2rem; }
+  .about-grid h2 { font-size: 2rem; }
+  .contact-card { padding: 24px; width: calc(100% - 32px); }
+  .contact-card-heading { margin-bottom: 26px; }
+  .contact-card h2 { font-size: 2.2rem; }
+  .contact-email { padding: 16px; }
   .email-link { font-size: .9375rem; }
   .image-dialog { width: calc(100% - 20px); }
   .dialog-header { padding: 12px 15px; }
   .enlarge-label { display: none; }
 }
 @media print {
-  .portfolio-rail,.page-header,.mobile-index,.skip-link,.image-dialog,.enlarge-label { display: none; }
+  .portfolio-rail,.page-header,.mobile-index,.skip-link,.image-dialog,.contact-card,.enlarge-label { display: none; }
   .portfolio-page { margin: 0; padding: 0; }
   .gallery-section { padding-block: 20px; }
   .art,figure,.website-card { break-inside: avoid; }
@@ -282,11 +293,11 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
   <aside class="portfolio-rail" aria-label="Portfolio navigation">
     <div><a class="identity" href="#top" aria-label="Katelynn Noah, back to top"><h1>Katelynn <br>Noah.</h1></a><p class="role"><span>Design</span><span>Development</span><span>Film</span></p></div>
     <nav class="rail-nav" aria-label="Work and about"><a href="#websites" data-section-link><span class="nav-number">01</span><span>Websites</span></a><a href="#brand-boards" data-section-link><span class="nav-number">02</span><span>Brand identities</span></a><a href="#catalogs" data-section-link><span class="nav-number">03</span><span>Catalogs</span></a><a href="#logos" data-section-link><span class="nav-number">04</span><span>Logos</span></a><a href="#business-cards" data-section-link><span class="nav-number">05</span><span>Print design</span></a><a href="#motion" data-section-link><span class="nav-number">06</span><span>Film &amp; video</span></a><a href="#about" data-section-link><span class="nav-number">07</span><span>About</span></a></nav>
-    <a class="rail-contact" href="#contact">Get in touch</a>
+    <button class="rail-contact contact-trigger" type="button" data-open-contact aria-haspopup="dialog" aria-controls="contact">Get in touch</button>
     <div class="rail-bottom"><a href="https://www.linkedin.com/in/katelynnnoah" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/katenoahpersonal-svg" target="_blank" rel="noopener noreferrer">GitHub</a></div>
   </aside>
   <div class="portfolio-page">
-    <header class="page-header"><div><p>Design, development &amp; film</p><p class="page-title">Selected work.</p></div><nav aria-label="Profile and contact"><a href="#about">About Kate</a><a href="#contact">Contact</a></nav></header>
+    <header class="page-header"><div><p>Design, development &amp; film</p><p class="page-title">Selected work.</p></div><nav aria-label="Profile and contact"><a href="#about">About Kate</a><button class="contact-trigger" type="button" data-open-contact aria-haspopup="dialog" aria-controls="contact">Contact</button></nav></header>
     <nav class="mobile-index" aria-label="Browse the work"><a href="#websites" data-section-link><span class="nav-number">01</span><span>Websites</span></a><a href="#brand-boards" data-section-link><span class="nav-number">02</span><span>Brand identities</span></a><a href="#catalogs" data-section-link><span class="nav-number">03</span><span>Catalogs</span></a><a href="#logos" data-section-link><span class="nav-number">04</span><span>Logos</span></a><a href="#business-cards" data-section-link><span class="nav-number">05</span><span>Print design</span></a><a href="#motion" data-section-link><span class="nav-number">06</span><span>Film &amp; video</span></a></nav>
     <main id="main">
       <div id="work"><section class="gallery-section websites" id="websites" aria-labelledby="websites-title">
@@ -335,14 +346,19 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
       <div class="experience-grid"><h3>Experience</h3><div class="experience-item"><span class="eyebrow">2019–2024 / In office</span><h4>Matuska Taxidermy Supply</h4><p class="role">Marketing Coordinator</p><p>Catalog production, email and social ads, Meta and AdRoll budget management, and live production.</p></div><div class="experience-item"><span class="eyebrow">2024–present / Remote</span><h4>Matuska Taxidermy Supply</h4><p class="role">Web, ecommerce &amp; creative</p><p>Continued with Matuska after moving to California, supporting the storefront, digital content and marketing remotely.</p></div></div>
       <div class="skills-heading"><h3>Skills &amp; tools</h3></div><div class="skills-grid"><div class="skill"><h3>Web & ecommerce</h3><p>Responsive websites, storefront customization and front-end development.</p><p class="tools">HTML · CSS · JavaScript<br>BigCommerce · Shopify · WordPress</p></div><div class="skill"><h3>Design & print</h3><p>Visual identities, catalogs, advertising and campaign graphics.</p><p class="tools">Photoshop · Illustrator · InDesign<br>Figma · Adobe Acrobat</p></div><div class="skill"><h3>Marketing & campaigns</h3><p>Email, paid social, retargeting and promotional content.</p><p class="tools">Meta Ads · AdRoll<br>Mailchimp · Klaviyo</p></div><div class="skill"><h3>Film & production</h3><p>Video editing, social reels, motion and live broadcast production.</p><p class="tools">Premiere Pro · DaVinci Resolve<br>After Effects · OBS · Restream</p></div></div>
     </div></section>
-      <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell">
-      <div class="contact-main"><div><p class="eyebrow">Projects &amp; opportunities</p><h2 id="contact-title">Get in touch.</h2></div><div class="contact-details"><a class="email-link" href="mailto:katenoah.personal@gmail.com">katenoah.personal@gmail.com</a><div class="social-links"><a href="https://www.linkedin.com/in/katelynnnoah" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/katenoahpersonal-svg" target="_blank" rel="noopener noreferrer">GitHub</a></div></div></div>
-      <footer><span>© 2026 Katelynn Noah</span><a href="#top">Back to top</a></footer>
-    </div></section>
+      <footer><span>© 2026 Katelynn Noah</span><a href="#top">Back to top</a></footer><noscript><p class="contact-fallback"><a href="mailto:katenoah.personal@gmail.com">Email Kate: katenoah.personal@gmail.com</a></p></noscript>
     </main>
   </div>
+  <dialog class="contact-card" id="contact" aria-labelledby="contact-title" aria-describedby="contact-description">
+    <div class="contact-card-heading"><p class="eyebrow">Katelynn Noah</p><button class="contact-close" type="button" aria-label="Close contact card" autofocus><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button></div>
+    <h2 id="contact-title">Get in touch.</h2>
+    <p id="contact-description">Design, development &amp; film.</p>
+    <div class="contact-email"><p class="eyebrow">Email</p><a class="email-link" href="mailto:katenoah.personal@gmail.com">katenoah.personal@gmail.com</a></div>
+    <div class="contact-profiles"><a href="https://www.linkedin.com/in/katelynnnoah" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/katenoahpersonal-svg" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+    <p class="contact-card-note">Projects &amp; creative opportunities</p>
+  </dialog>
   <dialog class="image-dialog" id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><p id="dialog-title"></p><button type="button" id="close-image">Close</button></div><img id="dialog-image" alt=""></dialog>
-  <script>/* Optional image enlargement. All page content is available without JavaScript. */
+  <script>/* Contact card and optional image enlargement. Direct email fallback is available without JavaScript. */
 (() => {
   const dialog = document.getElementById('image-dialog');
   const image = document.getElementById('dialog-image');
@@ -374,6 +390,31 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
   });
 })();
 
+
+/* Open contact in a card, preserving the current collection and scroll position. */
+(() => {
+  const card = document.getElementById('contact');
+  const triggers = [...document.querySelectorAll('[data-open-contact]')];
+  if (!card || typeof card.showModal !== 'function') return;
+  let opener = null;
+  const openContact = trigger => {
+    if (card.open) return;
+    opener = trigger || null;
+    card.showModal();
+    document.body.classList.add('dialog-open');
+  };
+  triggers.forEach(trigger => trigger.addEventListener('click', () => openContact(trigger)));
+  card.querySelector('.contact-close').addEventListener('click', () => card.close());
+  card.addEventListener('click', event => {
+    const bounds = card.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) card.close();
+  });
+  card.addEventListener('close', () => {
+    document.body.classList.toggle('dialog-open', document.getElementById('image-dialog').open);
+    opener?.focus({ preventScroll: true });
+  });
+  if (location.hash === '#contact') openContact();
+})();
 
 /* Highlight the current collection in the desktop and mobile indexes. */
 (() => {

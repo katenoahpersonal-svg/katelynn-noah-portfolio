@@ -37,3 +37,6 @@ EDITING
 Page content: HTML in index.html.
 Colors and layouts: the style block in index.html.
 Optional image enlargement and section highlighting: the final script block.
+Contact and Get in touch open a centered contact card with email and profile
+links. Close it with the close button, Escape, or a click outside the card.
+Opening and closing the card preserves the current position in the portfolio.
