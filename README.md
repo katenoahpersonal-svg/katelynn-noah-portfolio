@@ -1,6 +1,6 @@
-# Katelynn Noah — Editorial Edition 04
+# Katelynn Noah — Gallery Portfolio
 
-Complete static portfolio for GitHub Pages: oversized typography, black-and-white framing, asymmetrical compositions, and original full-color work. No package installation, build process, or external fonts.
+Complete static portfolio for GitHub Pages: an ivory and burgundy gallery theme, restrained serif typography, consistent artwork grids, and original full-color work. No package installation, build process, or external fonts.
 
 ## Included work
 
@@ -13,7 +13,7 @@ Complete static portfolio for GitHub Pages: oversized typography, black-and-whit
 - Véla and Blackstone Auto Gallery brand boards, with local previews and original PDF files.
 - Four Hope in Print videos, with posters and playback controls.
 
-The page shows every artwork without opening individual project pages. Optional image enlargement supports keyboard focus, Escape, and Close. Category links jump to sections in the same page. Responsive layouts and reduced-motion styles are included.
+The page shows every artwork without opening individual project pages. Optional image enlargement supports keyboard focus, Escape, and Close. The sticky section menu jumps to every collection in the same page. Responsive layouts and reduced-motion styles are included.
 
 ## Open or publish
 
@@ -25,7 +25,7 @@ All artwork, videos, brand-board PDFs, and website screenshots are local files. 
 
 Content and destination links: `index.html`.
 Typography and layouts: `styles.css`.
-Optional image dialog: `script.js`.
+Image enlargement and section menu: `script.js`.
 Project assets: `assets/` (safe filenames; supplied artwork encoded as high-quality WebP at its original dimensions).
 
 Matuska experience retains the owner's timeline: in-office 2019–2024, remote afterward. No invented results or metrics.

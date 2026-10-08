@@ -1,4 +1,4 @@
-KATELYNN NOAH — COMPLETE EDITORIAL WEBSITE / EDITION 04
+KATELYNN NOAH — COMPLETE GALLERY WEBSITE
 
 EXTRACT THE ZIP FIRST, THEN OPEN index.html.
 Keep styles.css, script.js, and the assets folder beside it.
@@ -22,6 +22,6 @@ Replace the previous index.html and keep the existing Pages settings.
 
 EDITING
 Text and links: index.html
-Theme and layout: styles.css
+Gallery theme and layout: styles.css
 Image enlargement: script.js
 Artwork and screenshots: assets/

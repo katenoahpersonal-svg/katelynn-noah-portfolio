@@ -29,3 +29,19 @@
     opener?.focus();
   });
 })();
+
+/* Keep the section index in step with the visible work. */
+(() => {
+  if (!('IntersectionObserver' in window)) return;
+  const links = [...document.querySelectorAll('.browse-inner nav a')];
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      links.forEach(link => {
+        if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-85px 0px -60% 0px', threshold: 0 });
+  links.forEach(link => { const section = document.querySelector(link.getAttribute('href')); if (section) observer.observe(section); });
+})();
