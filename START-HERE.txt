@@ -1,29 +1,27 @@
-KATELYNN NOAH — COMPLETE EDITORIAL WEBSITE
+KATELYNN NOAH — COMPLETE EDITORIAL WEBSITE / EDITION 04
 
-This is the complete replacement website, Editorial Edition 03.
-Its opening screen is BLACK, with KATELYNN in large white letters and Noah. in italic type.
+EXTRACT THE ZIP FIRST, THEN OPEN index.html.
+Keep styles.css, script.js, and the assets folder beside it.
+No installation or build is needed.
 
-OPEN IT
-Extract the ZIP first, then double-click index.html.
-Keep styles.css, script.js, and the assets folder beside index.html.
-No installation or build is required. The site works offline.
+FEATURED WORK
+Hope Records • Discount Fireworks Outlet • Matuska Taxidermy Supply
+2024 catalog • 2022 catalog • Complete Black Friday 2024 catalog
+10 logo designs • 4 graphics • Hope in Print business cards (front and back)
+Véla and Blackstone brand boards • A & E brochure • T & M Safety advertising
+4 Hope in Print videos with posters and playback controls
 
-UPLOAD TO YOUR EXISTING GITHUB PORTFOLIO
-Upload these files to the ROOT of katelynn-noah-portfolio:
-  index.html
-  styles.css
-  script.js
-  assets/ (all four files)
-  .nojekyll
+The artwork and website screenshots are included locally.
+Catalogs use online Issuu readers and require internet. Direct publication
+links are visible under each reader. Catalog PDFs are not bundled in this ZIP.
 
-Replace the previous index.html. Keep your current GitHub Pages settings.
-When the Pages deployment finishes, refresh the site with Ctrl+Shift+R.
+GITHUB PAGES
+The published page is index.html at the ROOT of katelynn-noah-portfolio.
+Upload index.html, styles.css, script.js, .nojekyll, and the complete assets folder.
+Replace the previous index.html and keep the existing Pages settings.
 
-EDIT CONTENT
-Text, project descriptions, and links: index.html
-Layout, typography, responsive styles: styles.css
-Optional image enlargement: script.js
-Project images: assets/
-
-The current work samples remain selections from earlier shared work.
-Replace them with your preferred finished projects when you have chosen those assets.
+EDITING
+Text and links: index.html
+Theme and layout: styles.css
+Image enlargement: script.js
+Artwork and screenshots: assets/
