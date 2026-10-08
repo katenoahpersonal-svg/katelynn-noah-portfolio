@@ -5,20 +5,24 @@ Extract the ZIP and open index.html. Keep the assets folder beside it.
 No installation or build is required. HTML, CSS and JavaScript are in index.html.
 
 THEME
-Cream canvas, lavender desktop index, restrained serif type and pastel artwork
-frames. Sage, pale blue, peach and eucalyptus come from the supplied references.
+Two very light theme colors: warm ivory (#faf8f2) and pale sage (#eef1e8).
+Restrained serif type, a pale sage desktop index and consistent artwork frames.
+Original artwork retains its original colors.
 Titles, descriptions and links use shared rows to keep every card aligned.
 The navigation becomes a compact section index on smaller screens.
 
 INCLUDED
 Hope Records, DFO and Matuska website previews; two brand boards with PDFs;
-twelve mixed logo designs; business cards; the A & E brochure exterior;
+eight selected logo designs; business cards; the A & E brochure exterior;
 T & M advertising and review artwork; three videos; three Issuu catalog readers.
-Six new archive selections are mixed throughout the logo gallery. The Marlin
-uses the higher-resolution vector-derived export. Original colors are preserved.
+Kindred, Véla, Blackstone, Vintage Hype, 2 Girls 1 Microphone and A & E lead the
+logo gallery. Only two Matuska marks remain. Véla and Blackstone are faithful
+exports from the supplied brand-board PDFs. The Marlin uses the sharper export.
 
 The CEO, DFO, Summit Series and Wild Wings logo tiles, campaign graphics section,
 A & E brochure inside page and Logo Design promo video were removed as requested.
+The typographic, sheep and sunset, apparel and compass marks were also removed.
+The additional antler and Great Lakes variants were removed to reduce repetition.
 Original source uploads are preserved separately.
 
 MATUSKA
