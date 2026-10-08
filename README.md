@@ -1,32 +1,35 @@
-# Katelynn Noah — Gallery Portfolio
+KATELYNN NOAH — COMPLETE PORTFOLIO
 
-Complete static portfolio for GitHub Pages: an ivory and burgundy gallery theme, restrained serif typography, consistent artwork grids, and original full-color work. No package installation, build process, or external fonts.
+This package matches the new theme published on GitHub Pages.
+Extract the ZIP and open index.html. Keep the assets folder beside it.
+No installation or build is required. HTML, CSS and JavaScript are in index.html.
 
-## Included work
+THEME
+Cream canvas, lavender desktop index, restrained serif type and pastel artwork
+frames. Sage, pale blue, peach and eucalyptus come from the supplied references.
+Titles, descriptions and links use shared rows to keep every card aligned.
+The navigation becomes a compact section index on smaller screens.
 
-- Hope Records: real live-site screenshot and website link.
-- Discount Fireworks Outlet: real live-site screenshot and website link.
-- Matuska Taxidermy Supply: actual storefront preview and the correct shop.matuskataxidermy.com link. The brand logo remains in the logo collection.
-- 2024 and 2022 Matuska catalogs: live Issuu readers with direct publication links.
-- Complete Black Friday 2024 catalog: large live Issuu reader with a direct link.
-- Ten supplied logo designs, four promotional/social graphics, both Hope in Print business card sides, an A & E Outdoor Services brochure, T & M Safety Systems ads and a review graphic.
-- Véla and Blackstone Auto Gallery brand boards, with local previews and original PDF files.
-- Four Hope in Print videos, with posters and playback controls.
+INCLUDED
+Hope Records, DFO and Matuska website previews; two brand boards with PDFs;
+twelve mixed logo designs; business cards; the A & E brochure exterior;
+T & M advertising and review artwork; three videos; three Issuu catalog readers.
+Six new archive selections are mixed throughout the logo gallery. The Marlin
+uses the higher-resolution vector-derived export. Original colors are preserved.
 
-The page shows every artwork without opening individual project pages. Optional image enlargement supports keyboard focus, Escape, and Close. The sticky section menu jumps to every collection in the same page. Responsive layouts and reduced-motion styles are included.
+The CEO, DFO, Summit Series and Wild Wings logo tiles, campaign graphics section,
+A & E brochure inside page and Logo Design promo video were removed as requested.
+Original source uploads are preserved separately.
 
-## Open or publish
+MATUSKA
+The website feature shows the actual storefront and links to
+https://shop.matuskataxidermy.com/. Its logo is in the logo collection.
 
-Extract the ZIP and open `index.html`. Keep `styles.css`, `script.js`, and `assets/` in the same folder. For GitHub Pages, publish these files at the repository root and replace the existing `index.html`. `.nojekyll` is included.
+CATALOGS
+The Issuu readers and direct publication links require internet. Catalog PDFs
+and standalone covers were not supplied. Brand-board PDFs are included locally.
 
-All artwork, videos, brand-board PDFs, and website screenshots are local files. Videos are encoded at 720 pixels wide in compatible H.264 MP4 for web playback, with the final reel’s audio retained. The Issuu catalog readers require internet and depend on the publisher's embedding settings. The original PDF files and standalone catalog cover images were not available to download during this update; direct Issuu links remain visible below each reader. The Matuska feature uses a real screenshot of https://shop.matuskataxidermy.com/ and links to that storefront.
-
-## Edit
-
-Content and destination links: `index.html`.
-Typography and layouts: `styles.css`.
-Image enlargement and section menu: `script.js`.
-Project assets: `assets/` (safe filenames; supplied artwork encoded as high-quality WebP at its original dimensions).
-
-Matuska experience retains the owner's timeline: in-office 2019–2024, remote afterward. No invented results or metrics.
-
+EDITING
+Page content: HTML in index.html.
+Colors and layouts: the style block in index.html.
+Optional image enlargement and section highlighting: the final script block.
