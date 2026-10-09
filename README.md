@@ -4,6 +4,13 @@ This package matches the new theme published on GitHub Pages.
 Extract the ZIP and open index.html. Keep the assets folder beside it.
 No installation or build is required. HTML, CSS and JavaScript are in index.html.
 
+LAYOUT & CONTACT
+About Kate and Skills & tools lead the page, followed by selected work.
+The original contact section is at the bottom. Contact, Get in touch and the
+bottom contact heading open a centered card while keeping your place. Close
+it with Escape, the close button or a click outside. Email and profile links
+are also available directly in the bottom section.
+
 THEME
 Two very light theme colors: warm ivory (#faf8f2) and pale sage (#eef1e8).
 Restrained serif type, a pale sage desktop index and consistent artwork frames.
@@ -37,6 +44,3 @@ EDITING
 Page content: HTML in index.html.
 Colors and layouts: the style block in index.html.
 Optional image enlargement and section highlighting: the final script block.
-Contact and Get in touch open a centered contact card with email and profile
-links. Close it with the close button, Escape, or a click outside the card.
-Opening and closing the card preserves the current position in the portfolio.
