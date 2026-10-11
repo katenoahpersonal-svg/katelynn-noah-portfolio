@@ -80,7 +80,7 @@ h2 { font: 400 1.95rem/1.2 var(--serif); letter-spacing: -.025em; }
 
 /* Each card shares the parent's image, title, description and link rows.
    A longer caption expands the shared row rather than pushing one link down. */
-.website-grid,.board-grid,.logo-grid,.graphic-grid,.print-pair,.security-grid,.video-grid,.skills-grid { display: grid; align-items: stretch; gap: 0 26px; }
+.website-grid,.board-grid,.logo-grid,.graphic-grid,.print-pair,.security-grid,.video-grid { display: grid; align-items: stretch; gap: 0 26px; }
 .website-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .website-card { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 0; padding-bottom: 8px; }
 .website-copy { display: contents; }
@@ -154,13 +154,13 @@ h2 { font: 400 1.95rem/1.2 var(--serif); letter-spacing: -.025em; }
 .experience-item h4 { font-weight: 500; font-size: .9375rem; padding-top: 11px; }
 .experience-item .role { display: block; margin: 0; padding-top: 4px; color: var(--ink); font-size: .8125rem; }
 .experience-item > p:last-child { color: var(--muted); font-size: .875rem; padding-top: 12px; }
-.skills-heading { margin-top: 0; }
-.skills-heading h2 { font: 400 1.6rem/1.4 var(--serif); }
-.skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: 22px; row-gap: 20px; column-gap: 22px; }
-.skill { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 0; padding: 23px; background: var(--sage); }
-.skill h3 { font: 500 .9375rem/1.4 var(--sans); }
-.skill > p { color: var(--muted); font-size: .875rem; padding-top: 10px; }
-.skill .tools { color: var(--ink); font-size: .8125rem; line-height: 1.8; padding-top: 13px; }
+
+
+
+
+
+
+
 .contact-trigger { border: 0; padding: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; cursor: pointer; }
 .contact-trigger:hover { text-decoration-thickness: 2px; }
 .contact-card { position: fixed; inset: 0; margin: auto; width: min(520px,calc(100% - 40px)); height: fit-content; max-height: calc(100dvh - 40px); overflow: auto; padding: 38px; border: 1px solid var(--line); background: var(--cream); color: var(--ink); box-shadow: 0 16px 60px rgb(47 51 48 / .12); }
@@ -246,7 +246,7 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
   .section-heading { display: block; margin-bottom: 21px; }
   .section-heading > p { text-align: left; max-width: none; margin-top: 8px; }
   h2 { font-size: 1.8rem; }
-  .board-grid,.print-pair,.skills-grid { grid-template-columns: 1fr; }
+  .board-grid,.print-pair { grid-template-columns: 1fr; }
   .board-card { padding-bottom: 32px; }
   .board-card:last-child { padding-bottom: 0; }
   .board-art { max-height: none; }
@@ -270,9 +270,9 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
   .video-caption p,.video-direct { font-size: .75rem; }
   .experience-grid { grid-template-columns: 1fr; }
   .experience-item + .experience-item { margin-top: 26px; }
-  .skill { padding: 20px; }
-  .skills-grid { row-gap: 0; }
-  .skill + .skill { margin-top: 20px; }
+
+
+
   .about-grid h2 { font-size: 2rem; }
   .contact-card { padding: 24px; width: calc(100% - 32px); }
   .contact-card-heading { margin-bottom: 26px; }
@@ -292,7 +292,7 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
 
 
 /* Introductory sections share the work gallery's content edges. */
-.skills-section { border-top: 1px solid var(--line); padding-block: 30px 48px; }
+
 #work { border-top: 1px solid var(--line); }
 .experience-section { padding-block: 0 39px; }
 .experience-section .experience-grid { margin-top: 0; border-bottom: 0; padding-bottom: 0; }
@@ -310,24 +310,29 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
 @media (max-width: 520px) {
   .contact-main h2 { font-size: 2rem; }
 }
-/* Compact skills index: four open columns, with no oversized cards. */
-.skills-section { padding-block: 22px 28px; }
-.skills-heading h2 { font-size: 1.25rem; }
-.skills-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 17px; gap: 18px; }
-.skill { display: block; grid-row: auto; padding: 0 16px 0 0; background: transparent; }
-.skill + .skill { margin-top: 0; padding-left: 16px; border-left: 1px solid var(--line); }
-.skill h3 { font-size: .8125rem; }
-.skill > p { font-size: .75rem; line-height: 1.5; padding-top: 6px; }
-.skill .tools { font-size: .6875rem; line-height: 1.65; padding-top: 9px; }
-@media (max-width: 1250px) {
-  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-  .skill:nth-child(3) { border-left: 0; padding-left: 0; }
+/* Skills stay a compact supporting index above the work. */
+.skills-section { padding-block: 24px 28px; }
+.skills-heading h2 { font: 500 .6875rem/1.4 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.skills-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 16px; align-items: start; }
+.skill { min-width: 0; }
+.skill h3 { font: 400 1.075rem/1.35 var(--serif); letter-spacing: -.015em; }
+.skill .tools { margin-top: 9px; font: 400 .75rem/1.75 var(--sans); color: var(--muted); }
+@media (min-width: 1101px) {
+  .portfolio-rail { padding-top: 32px; padding-bottom: 22px; }
+  .portfolio-rail > div > .role { margin-top: 15px; line-height: 1.65; }
+  .rail-nav { margin-top: 28px; }
+  .rail-nav a { padding-block: 7px; }
+  .rail-contact { margin-top: 24px; }
+  .rail-bottom { padding-top: 24px; }
 }
-@media (max-width: 520px) {
-  .skills-grid { grid-template-columns: 1fr; gap: 0; }
-  .skill, .skill + .skill { padding: 12px 0; border-left: 0; }
-  .skill + .skill { border-top: 1px solid var(--line); }
-  .skill .tools { font-size: .75rem; }
+@media (max-width: 700px) {
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 20px; }
+  .skills-section { padding-block: 22px 25px; }
+  .skill h3 { font-size: 1rem; }
+}
+@media (max-width: 380px) {
+  .skills-grid { column-gap: 14px; }
+  .skill .tools { font-size: .75rem; line-height: 1.6; }
 }
 </style>
 </head>
@@ -344,7 +349,15 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
     <nav class="mobile-index" aria-label="Browse the work"><a href="#skills" data-section-link><span class="nav-number">01</span><span>Skills &amp; tools</span></a><a href="#websites" data-section-link><span class="nav-number">02</span><span>Websites</span></a><a href="#brand-boards" data-section-link><span class="nav-number">03</span><span>Brand identities</span></a><a href="#catalogs" data-section-link><span class="nav-number">04</span><span>Catalogs</span></a><a href="#logos" data-section-link><span class="nav-number">05</span><span>Logos</span></a><a href="#business-cards" data-section-link><span class="nav-number">06</span><span>Print design</span></a><a href="#motion" data-section-link><span class="nav-number">07</span><span>Film &amp; video</span></a><a href="#about" data-section-link><span class="nav-number">08</span><span>About Kate</span></a></nav>
     <main id="main">
       
-<section class="skills-section" id="skills" aria-labelledby="skills-title"><div class="skills-heading"><h2 id="skills-title">Skills &amp; tools</h2></div><div class="skills-grid"><div class="skill"><h3>Web & ecommerce</h3><p>Websites, ecommerce &amp; front-end development.</p><p class="tools">HTML · CSS · JavaScript<br>BigCommerce · Shopify · WordPress</p></div><div class="skill"><h3>Design & print</h3><p>Brand identities, catalogs &amp; graphics.</p><p class="tools">Photoshop · Illustrator · InDesign<br>Figma · Adobe Acrobat</p></div><div class="skill"><h3>Marketing & campaigns</h3><p>Email, paid social &amp; retargeting.</p><p class="tools">Meta Ads · AdRoll<br>Mailchimp · Klaviyo</p></div><div class="skill"><h3>Film & production</h3><p>Editing, motion &amp; live production.</p><p class="tools">Premiere Pro · DaVinci Resolve<br>After Effects · OBS · Restream</p></div></div></section>
+<section class="skills-section" id="skills" aria-labelledby="skills-title">
+  <div class="skills-heading"><h2 id="skills-title">Skills &amp; tools</h2></div>
+  <div class="skills-grid">
+    <div class="skill"><h3>Web &amp; ecommerce</h3><p class="tools">HTML · CSS · JavaScript<br>BigCommerce · Shopify<br>WordPress</p></div>
+    <div class="skill"><h3>Design &amp; print</h3><p class="tools">Photoshop · Illustrator<br>InDesign · Figma<br>Adobe Acrobat</p></div>
+    <div class="skill"><h3>Marketing</h3><p class="tools">Meta Ads · AdRoll<br>Mailchimp · Klaviyo</p></div>
+    <div class="skill"><h3>Film &amp; production</h3><p class="tools">Premiere Pro · DaVinci Resolve<br>After Effects · OBS · Restream</p></div>
+  </div>
+</section>
 <div id="work"><section class="gallery-section websites" id="websites" aria-labelledby="websites-title">
         <div class="section-heading"><div class="section-title"><span class="section-number">02</span><h2 id="websites-title">Websites</h2></div><p>Design &amp; development</p></div>
         <div class="website-grid"><article class="website-card">
