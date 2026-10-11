@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#faf8f2">
+  <meta name="theme-color" content="#deece7">
   <meta name="description" content="Katelynn Noah. Design, development and film. Selected websites, brand identities, catalogs, logos, print and moving image.">
   <meta property="og:title" content="Katelynn Noah — Creative Portfolio">
   <meta property="og:description" content="Selected work in design, development and film.">
   <meta property="og:type" content="website">
   <title>Katelynn Noah — Creative Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%232f3330%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2245%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2243%22%20fill%3D%22%23faf8f2%22%3Ek%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%232f3330%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2245%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2243%22%20fill%3D%22%23deece7%22%3Ek%3C/text%3E%3C/svg%3E">
   <style>
-/* Two very light colors, selected from Kate's supplied references. */
+/* Vela's exact pale mint background, shared by every theme surface. */
 :root {
-  --cream: #faf8f2;
-  --sage: #eef1e8;
+  --cream: #deece7;
+  --sage: #deece7;
   --ink: #2f3330;
   --muted: #646c64;
   --line: rgb(47 51 48 / .18);
@@ -108,6 +108,10 @@ h2 { font: 400 1.95rem/1.2 var(--serif); letter-spacing: -.025em; }
 .logo-card { display: grid; grid-template-rows: subgrid; grid-row: span 2; row-gap: 0; }
 .logo-art { aspect-ratio: 1; border: 1px solid var(--line); background: var(--cream); }
 .logo-art img { padding: 6px; }
+/* Blend white-backed artwork into the same Vela mint used throughout the theme. */
+.logo-art, .image-dialog.logo-preview { isolation: isolate; }
+.logo-art img[src*="logo-blackstone"], .logo-art img[src*="logo-matuska-marlin-archive"],
+.image-dialog.logo-preview img[src*="logo-blackstone"], .image-dialog.logo-preview img[src*="logo-matuska-marlin-archive"] { mix-blend-mode: multiply; }
 .logo-card figcaption { padding-block: 12px 27px; font-size: .8125rem; line-height: 1.45; }
 .graphic-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .graphic-card { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 0; }
@@ -395,6 +399,7 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       opener = link;
+      dialog.classList.toggle('logo-preview', link.classList.contains('logo-art'));
       image.src = link.getAttribute('href');
       image.alt = link.querySelector('img')?.alt || link.dataset.imageTitle;
       title.textContent = link.dataset.imageTitle;
