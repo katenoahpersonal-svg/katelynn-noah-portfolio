@@ -310,6 +310,25 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
 @media (max-width: 520px) {
   .contact-main h2 { font-size: 2rem; }
 }
+/* Compact skills index: four open columns, with no oversized cards. */
+.skills-section { padding-block: 22px 28px; }
+.skills-heading h2 { font-size: 1.25rem; }
+.skills-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 17px; gap: 18px; }
+.skill { display: block; grid-row: auto; padding: 0 16px 0 0; background: transparent; }
+.skill + .skill { margin-top: 0; padding-left: 16px; border-left: 1px solid var(--line); }
+.skill h3 { font-size: .8125rem; }
+.skill > p { font-size: .75rem; line-height: 1.5; padding-top: 6px; }
+.skill .tools { font-size: .6875rem; line-height: 1.65; padding-top: 9px; }
+@media (max-width: 1250px) {
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .skill:nth-child(3) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 520px) {
+  .skills-grid { grid-template-columns: 1fr; gap: 0; }
+  .skill, .skill + .skill { padding: 12px 0; border-left: 0; }
+  .skill + .skill { border-top: 1px solid var(--line); }
+  .skill .tools { font-size: .75rem; }
+}
 </style>
 </head>
 <body id="top">
@@ -325,7 +344,7 @@ footer { display: flex; justify-content: space-between; gap: 18px; border-top: 1
     <nav class="mobile-index" aria-label="Browse the work"><a href="#skills" data-section-link><span class="nav-number">01</span><span>Skills &amp; tools</span></a><a href="#websites" data-section-link><span class="nav-number">02</span><span>Websites</span></a><a href="#brand-boards" data-section-link><span class="nav-number">03</span><span>Brand identities</span></a><a href="#catalogs" data-section-link><span class="nav-number">04</span><span>Catalogs</span></a><a href="#logos" data-section-link><span class="nav-number">05</span><span>Logos</span></a><a href="#business-cards" data-section-link><span class="nav-number">06</span><span>Print design</span></a><a href="#motion" data-section-link><span class="nav-number">07</span><span>Film &amp; video</span></a><a href="#about" data-section-link><span class="nav-number">08</span><span>About Kate</span></a></nav>
     <main id="main">
       
-<section class="skills-section" id="skills" aria-labelledby="skills-title"><div class="skills-heading"><h2 id="skills-title">Skills &amp; tools</h2></div><div class="skills-grid"><div class="skill"><h3>Web & ecommerce</h3><p>Responsive websites, storefront customization and front-end development.</p><p class="tools">HTML · CSS · JavaScript<br>BigCommerce · Shopify · WordPress</p></div><div class="skill"><h3>Design & print</h3><p>Visual identities, catalogs, advertising and campaign graphics.</p><p class="tools">Photoshop · Illustrator · InDesign<br>Figma · Adobe Acrobat</p></div><div class="skill"><h3>Marketing & campaigns</h3><p>Email, paid social, retargeting and promotional content.</p><p class="tools">Meta Ads · AdRoll<br>Mailchimp · Klaviyo</p></div><div class="skill"><h3>Film & production</h3><p>Video editing, social reels, motion and live broadcast production.</p><p class="tools">Premiere Pro · DaVinci Resolve<br>After Effects · OBS · Restream</p></div></div></section>
+<section class="skills-section" id="skills" aria-labelledby="skills-title"><div class="skills-heading"><h2 id="skills-title">Skills &amp; tools</h2></div><div class="skills-grid"><div class="skill"><h3>Web & ecommerce</h3><p>Websites, ecommerce &amp; front-end development.</p><p class="tools">HTML · CSS · JavaScript<br>BigCommerce · Shopify · WordPress</p></div><div class="skill"><h3>Design & print</h3><p>Brand identities, catalogs &amp; graphics.</p><p class="tools">Photoshop · Illustrator · InDesign<br>Figma · Adobe Acrobat</p></div><div class="skill"><h3>Marketing & campaigns</h3><p>Email, paid social &amp; retargeting.</p><p class="tools">Meta Ads · AdRoll<br>Mailchimp · Klaviyo</p></div><div class="skill"><h3>Film & production</h3><p>Editing, motion &amp; live production.</p><p class="tools">Premiere Pro · DaVinci Resolve<br>After Effects · OBS · Restream</p></div></div></section>
 <div id="work"><section class="gallery-section websites" id="websites" aria-labelledby="websites-title">
         <div class="section-heading"><div class="section-title"><span class="section-number">02</span><h2 id="websites-title">Websites</h2></div><p>Design &amp; development</p></div>
         <div class="website-grid"><article class="website-card">
